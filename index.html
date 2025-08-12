@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-search me-2"></i>Lost & Found Portal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="report-lost.html">Report Lost</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="report-found.html">Report Found</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="browse.html">Browse Items</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-primary mb-4">Find What You've Lost</h1>
+                    <p class="lead mb-4">Our community-driven platform helps reunite people with their lost belongings. Report lost items, browse found items, and help others in your community.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="report-lost.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-exclamation-triangle me-2"></i>Report Lost Item
+                        </a>
+                        <a href="report-found.html" class="btn btn-success btn-lg">
+                            <i class="fas fa-hand-holding me-2"></i>Report Found Item
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="/static/images/index.jpg" alt="Lost and Found Community" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="text-center mb-4">Search Lost & Found Items</h3>
+                            <form id="searchForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="searchQuery" placeholder="Search by item name or description">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <select class="form-select" id="categoryFilter">
+                                            <option value="">All Categories</option>
+                                            <option value="electronics">Electronics</option>
+                                            <option value="clothing">Clothing</option>
+                                            <option value="accessories">Accessories</option>
+                                            <option value="documents">Documents</option>
+                                            <option value="keys">Keys</option>
+                                            <option value="bags">Bags</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="submit" class="btn btn-primary w-100">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Items -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Recent Lost & Found Items</h2>
+            <div id="recentItems" class="row">
+                <!-- Items will be loaded here by JavaScript -->
+            </div>
+            <div class="text-center mt-4">
+                <a href="browse.html" class="btn btn-outline-primary">View All Items</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
